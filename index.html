@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4 text-center">Personal Budget Tracker</h1>    
+        <!-- Income section -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Add Income</h5>
+                <form id="income-form">
+                    <div class="form-group mb-4" >
+                        <label for="income" class="form-label">Income Amount:</label>
+                        <input type="number" class="form-control" name="" id="income-amount" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Add Income</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Expense section -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Add Expenses</h5>
+                <form id="expense-form">
+                    <div class="form-group mb-4">
+                        <label for="expenseDesc" class="form-label">Expense Description</label>
+                        <input type="text" class="form-control" name="" id="expenseDesc" required>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="expense-amount" class="form-label">Expense Amount</label>
+                        <input type="number" class="form-control" name="" id="expense-amount" required>
+                    </div>
+                    <!-- <select name="" id=""></select> -->
+                     <!-- Add Expense category eg food,transport,entertainment eg -->
+                     <div class="form-group  mb-3">
+                        <label for="category" class="form-label">Category</label>
+                        <select id="expense-category" class="form-select" >
+                            <option selected>Food</option>
+                            <option value="Transport">Transport</option>
+                            <option value="Entertainment">Entertainment</option>
+                            <option value="Others">Others</option>
+                          </select>
+                    </div>    
+                    <button type="submit" class="btn btn-primary mt-3">Add Expense</button>
+                </form>
+            </div>
+        </div>
+    
+         <!-- Budget Summary -->
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Budget Summary</h5>
+        <h6 id="displayIncome">Income is Rs 0</h6>
+        <h6 id="balance">Balance is Rs 0</h6>
+
+        <!-- Expenses Table -->
+        <h5 class="mt-4">Expenses</h5>
+        <table class="table table-striped" id="expenseTable">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Amount (Rs)</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
